@@ -1,0 +1,8 @@
+<%-include('partials/header.ejs')-%>
+<h1>Home</h1>
+<p><%=homeContent%></p>
+<% arrayOfPosts.forEach(function(ele){%>
+    <h1><%=ele.title%></h1>
+    <p><%=ele.post.substring(0,100)+"..."%><a href="posts/<%=ele.title%>">Readmore</a></p>
+<%})%>
+<%-include('partials/footer.ejs')-%>
